@@ -1,4 +1,4 @@
-# Spring Boot Web Project
+# Spring Boot Web Service
 > Backend de serviço web com Java, Spring Boot, Maven e JPA com Hibernate 
 
 ## Conteúdos exercitados
