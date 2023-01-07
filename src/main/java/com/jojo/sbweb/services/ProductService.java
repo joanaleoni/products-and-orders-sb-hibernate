@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jojo.sbweb.entities.Category;
 import com.jojo.sbweb.entities.Product;
 import com.jojo.sbweb.repositories.ProductRepository;
 
