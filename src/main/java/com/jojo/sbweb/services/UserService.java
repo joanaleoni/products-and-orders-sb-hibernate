@@ -13,6 +13,8 @@ import com.jojo.sbweb.repositories.UserRepository;
 import com.jojo.sbweb.services.exceptions.DatabaseException;
 import com.jojo.sbweb.services.exceptions.ResourceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
 	
@@ -37,15 +39,20 @@ public class UserService {
 			repository.deleteById(id);
 		} catch(EmptyResultDataAccessException e) {
 			throw new ResourceNotFoundException(id);
-		} catch (DataIntegrityViolationException e) {
+		} catch(DataIntegrityViolationException e) {
 			throw new DatabaseException(e.getMessage());
 		}
 	}
 	
 	public User upadte(Long id, User user) {
-		User entity = repository.getReferenceById(id);
-	    updateData(entity, user);
-	    return repository.save(entity);
+		try {
+			User entity = repository.getReferenceById(id);
+		    updateData(entity, user);
+		    return repository.save(entity);
+		} catch(EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
+		    	
 	}
 	
 	private void updateData(User entity, User obj) {
