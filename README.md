@@ -3,8 +3,7 @@
 
 ## Conteúdos exercitados
 - Estruturação de camadas lógicas: resource, service, repository
-- Mapeamento Objeto-Relacional
-- CRUD do banco de dados (JPA com Hibernate)
+- Mapeamento Objeto-Relacional (JPA com Hibernate)
 - Banco de dados de teste - H2
 - Programação Orientada a Objetos: 
   - Associação entre classes:
