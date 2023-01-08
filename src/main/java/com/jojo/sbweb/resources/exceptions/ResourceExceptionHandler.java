@@ -20,7 +20,7 @@ public class ResourceExceptionHandler {
 		String error = "Resource not found";
 		HttpStatus status = HttpStatus.NOT_FOUND;
 		StandardError err = new StandardError(Instant.now(), status.value(), error, e.getMessage(), request.getRequestURI());
-        	return ResponseEntity.status(status).body(err);
+        return ResponseEntity.status(status).body(err);
 	}
 	
 	@ExceptionHandler(DatabaseException.class)
@@ -28,6 +28,6 @@ public class ResourceExceptionHandler {
 		String error = "Database error";
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		StandardError err = new StandardError(Instant.now(), status.value(), error, e.getMessage(), request.getRequestURI());
-        	return ResponseEntity.status(status).body(err);
+        return ResponseEntity.status(status).body(err);
 	}
 }
