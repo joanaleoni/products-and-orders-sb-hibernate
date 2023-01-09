@@ -1,5 +1,5 @@
 # Spring Boot Web Service
-> Backend de serviço web com Java, Spring Boot, Maven e JPA com Hibernate 
+> Serviço web - Controle de produtos e pedidos | Java, Spring Boot, Maven e JPA com Hibernate 
 
 ## Conteúdos exercitados
 - Estruturação de camadas lógicas: resource, service, repository
